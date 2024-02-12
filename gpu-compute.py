@@ -17,7 +17,7 @@ try:
     while True:
         random_private_key = generate_random_private_key("9ffb3894434556451e2254800ecae2f99cfe964b1440901aaf718ec1")
         derived_address = Account.from_key(random_private_key).address.lower()
-        prefixes_to_check = ["0x2b6ed"]
+        prefixes_to_check = ["0x2b6"]
         if find_matching_address(prefixes_to_check, random_private_key):
             # Command to set GPU for computing
             command = 'nvidia-smi -i 0,1,2,3 -c EXCLUSIVE_PROCESS'
